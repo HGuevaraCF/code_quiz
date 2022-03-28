@@ -12,6 +12,15 @@ var scoreCount = 0;
 startButton.on('click', function(){
     Introduction.hide();
     fisrtQuestion.show();
+    if($(this).attr('id') == 'Optn1'){
+        console.log("correcto");
+        scoreCount++;
+        $('h3').text("Correct!");
+        console.log(scoreCount);
+    }else{
+        console.log("incorrecto");
+        $('h3').text("Correct!");
+    }
 })
 
 $('.FirstQuestionButton').on('click', function(){
