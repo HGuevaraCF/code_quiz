@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(80, 0, 102, 0.26);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Applying styles to buttons */
+button, form input[type=submit] {
+    background-color: #1b3a4b;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Applying hover response on buttons */
+button:hover{
+    background-color: #006466;
+}
+
+h1, h2 {
+    color: #272640;
+}
+
+/* hiding every section of the quiz in order to show them when needed */
+.question_section {
+    display: none;
+}
+
+div.options {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+div.options button{
+    margin-top: 5px;
+}
+
