@@ -8,6 +8,48 @@
         <link rel="stylesheet" href="./Assets/css/style.css"/>
     </head>
     <body>
+        <div class="intro" id="page_0">
+            <h1>Coding Quiz</h1>
+            <p>Are you prepared to test your habilities</p>
+            <button id="start_button">Start Quiz</button>
+        </div>
+        <div class="1stQ question_section" id="page_1">
+            <h2>First Question</h2>
+            <div class="options">
+                <button class="FirstQuestionButton" id="Optn1">Option 1</button>
+                <button class="FirstQuestionButton" id="Optn2">Option 2</button>
+                <button class="FirstQuestionButton" id="Optn3">Option 3</button>
+            </div>
+        </div>
+        <div class="2ndQ question_section" id="page_2">
+            <h2>Second Question</h2>
+            <div class="options">
+                <button class="SecondOptnButton">Option 1</button>
+                <button class="SecondOptnButton">Option 2</button>
+                <button class="SecondOptnButton">Option 3</button>
+            </div>
+        </div>
+        <div class="3rdQ question_section" id="page_3">
+            <h2>Third Question</h2>
+            <div class="options">
+                <button class="ThirdOptnButton">Option 1</button>
+                <button class="ThirdOptnButton">Option 2</button>
+                <button class="ThirdOptnButton">Option 3</button>
+            </div>
+        </div>
+        <div class="question_section" id="saveScore">
+            <h2>All done!</h2>
+            <p>Your score is <span id="ActualScore">10</span> points.</p>
+            <form>
+                <label> Enter initials:</label>
+                <input type="text" name="scoreInitials" placeholder="Initials">
+                <input id="submitBtn" type="submit" value="Save score">
+            </form>
+        </div>
+        <div id="result">
+            <h3></h3>
+        </div>
+
 
         <!-- Added link to the jQuery library -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
