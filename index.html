@@ -16,25 +16,25 @@
         <div class="1stQ question_section" id="page_1">
             <h2>First Question</h2>
             <div class="options">
-                <button class="FirstQuestionButton" id="Optn1">Option 1</button>
-                <button class="FirstQuestionButton" id="Optn2">Option 2</button>
-                <button class="FirstQuestionButton" id="Optn3">Option 3</button>
+                <button class="FirstQuestionButton" id="OptnA">Option 1</button>
+                <button class="FirstQuestionButton" id="OptnC">Option 2</button>
+                <button class="FirstQuestionButton" id="OptnB">Option 3</button>
             </div>
         </div>
         <div class="2ndQ question_section" id="page_2">
             <h2>Second Question</h2>
             <div class="options">
-                <button class="SecondOptnButton">Option 1</button>
-                <button class="SecondOptnButton">Option 2</button>
-                <button class="SecondOptnButton">Option 3</button>
+                <button class="SecondOptnButton" id="OptnC">Option 1</button>
+                <button class="SecondOptnButton" id="OptnB">Option 2</button>
+                <button class="SecondOptnButton" id="OptnA">Option 3</button>
             </div>
         </div>
         <div class="3rdQ question_section" id="page_3">
             <h2>Third Question</h2>
             <div class="options">
-                <button class="ThirdOptnButton">Option 1</button>
-                <button class="ThirdOptnButton">Option 2</button>
-                <button class="ThirdOptnButton">Option 3</button>
+                <button class="ThirdOptnButton" id="OptnA">Option 1</button>
+                <button class="ThirdOptnButton" id="OptnB">Option 2</button>
+                <button class="ThirdOptnButton" id="OptnC">Option 3</button>
             </div>
         </div>
         <div class="question_section" id="saveScore">
@@ -42,12 +42,23 @@
             <p>Your score is <span id="ActualScore">10</span> points.</p>
             <form>
                 <label> Enter initials:</label>
-                <input type="text" name="scoreInitials" placeholder="Initials">
+                <input type="text" id="Initials" name="scoreInitials" placeholder="Initials">
                 <input id="submitBtn" type="submit" value="Save score">
             </form>
         </div>
+        <div class="question_section" id="scoresHistory">
+            <h2>Scores</h2>
+            <ul></ul>
+            <button id="ClearScore">Clear scores</button>
+            <button id="RestartQuiz">Start again</button>
+
+        </div>
         <div id="result">
+            <hr>
             <h3></h3>
+        </div>
+        <div class="question_section" id="timer">
+            <h3><span id="timeLeft">0</span> seconds left!</h3>
         </div>
 
 
