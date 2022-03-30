@@ -9,37 +9,59 @@
     </head>
     <body>
         <div class="intro" id="page_0">
-            <h1>Coding Quiz</h1>
-            <p>Are you prepared to test your habilities</p>
+            <h1>Coding Quiz Challenge</h1>
+            <p>Answer the questions before the time runs out. Every mistake will cost 5 seconds</p>
+            <p>Are you prepared to test your habilities?</p>
             <button id="start_button">Start Quiz</button>
         </div>
         <div class="1stQ question_section" id="page_1">
-            <h2>First Question</h2>
+            <h2>Commonly used data types DO NOT include:</h2>
             <div class="options">
-                <button class="FirstQuestionButton" id="OptnA">Option 1</button>
-                <button class="FirstQuestionButton" id="OptnC">Option 2</button>
-                <button class="FirstQuestionButton" id="OptnB">Option 3</button>
+                <button class="FirstQuestionButton" id="OptnA">1. Strings</button>
+                <button class="FirstQuestionButton" id="OptnC">2. Booleans</button>
+                <button class="FirstQuestionButton" id="OptnB">3. Alerts</button>
+                <button class="FirstQuestionButton" id="OptnD">4. Numbers</button>
             </div>
         </div>
         <div class="2ndQ question_section" id="page_2">
-            <h2>Second Question</h2>
+            <h2>The condition in an if/else statement is enclosed within ______</h2>
             <div class="options">
-                <button class="SecondOptnButton" id="OptnC">Option 1</button>
-                <button class="SecondOptnButton" id="OptnB">Option 2</button>
-                <button class="SecondOptnButton" id="OptnA">Option 3</button>
+                <button class="SecondOptnButton" id="OptnA">1. Quotes</button>
+                <button class="SecondOptnButton" id="OptnB">2. Parentheses</button>
+                <button class="SecondOptnButton" id="OptnC">3. Curly brackets</button>
+                <button class="SecondOptnButton" id="OptnD">4. Square brackets</button>
             </div>
         </div>
         <div class="3rdQ question_section" id="page_3">
-            <h2>Third Question</h2>
+            <h2>Arrays in JavaScript can be used to store</h2>
             <div class="options">
-                <button class="ThirdOptnButton" id="OptnA">Option 1</button>
-                <button class="ThirdOptnButton" id="OptnB">Option 2</button>
-                <button class="ThirdOptnButton" id="OptnC">Option 3</button>
+                <button class="ThirdOptnButton" id="OptnB">1. Numbers and strings</button>
+                <button class="ThirdOptnButton" id="OptnA">2. Other arrays</button>
+                <button class="ThirdOptnButton" id="OptnD">3. Booleans</button>
+                <button class="ThirdOptnButton" id="OptnC">4. All of the above</button>
+            </div>
+        </div>
+        <div class="4rdQ question_section" id="page_4">
+            <h2>String values must be enclosed within _____ when being assigned to variables</h2>
+            <div class="options">
+                <button class="FourthOptnButton" id="OptnB">1. Commas</button>
+                <button class="FourthOptnButton" id="OptnD">2. Curly brackets</button>
+                <button class="FourthOptnButton" id="OptnA">4. Parentheses</button>
+                <button class="FourthOptnButton" id="OptnC">3. Quotes</button>
+            </div>
+        </div>
+        <div class="5thQ question_section" id="page_5">
+            <h2>A very useful tool used during development and debugging for printing content to debugger is:</h2>
+            <div class="options">
+                <button class="FifthOptnButton" id="OptnC">1. Console Log</button>
+                <button class="FifthOptnButton" id="OptnB">2. Terminal/bash</button>
+                <button class="FifthOptnButton" id="OptnD">3. For loops</button>
+                <button class="FifthOptnButton" id="OptnA">4. JavaScript</button>
             </div>
         </div>
         <div class="question_section" id="saveScore">
-            <h2>All done!</h2>
-            <p>Your score is <span id="ActualScore">10</span> points.</p>
+            <h2>Game Over!</h2>
+            <p>Your score is <span id="ActualScore">10</span>/10 points.</p>
             <form>
                 <label> Enter initials:</label>
                 <input type="text" id="Initials" name="scoreInitials" placeholder="Initials">
@@ -48,17 +70,28 @@
         </div>
         <div class="question_section" id="scoresHistory">
             <h2>Scores</h2>
-            <ul></ul>
-            <button id="ClearScore">Clear scores</button>
-            <button id="RestartQuiz">Start again</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="ScoreTable"></tbody>
+            </table>
+            <div class="buttons">
+                <button id="ClearScore">Clear scores</button>
+                <button id="RestartQuiz">Start again</button>
+            </div>
 
         </div>
         <div id="result">
             <hr>
-            <h3></h3>
+            <h3 id="grade"></h3>
         </div>
         <div class="question_section" id="timer">
-            <h3><span id="timeLeft">0</span> seconds left!</h3>
+            <hr>
+            <h3><span id="timeLeft"></span> seconds left!</h3>
         </div>
 
 

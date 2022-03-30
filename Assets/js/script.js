@@ -3,6 +3,8 @@ var Introduction = $('#page_0');
 var fisrtQuestion = $('#page_1');
 var secondQuestion = $('#page_2');
 var thirdQuestion = $('#page_3');
+var fourthQuestion = $('#page_4');
+var fifthQuestion = $('#page_5');
 var SaveScore = $('#saveScore');
 var ScoresHistory = $('#scoresHistory');
 var scoreDisplay = $('#ActualScore');
@@ -44,26 +46,42 @@ $('.SecondOptnButton').on('click', function(){
 
 ///Event on click 3rd question button
 $('.ThirdOptnButton').on('click', function(){
-    finalQuestion = true;
     thirdQuestion.hide();
-    SaveScore.show();
+    fourthQuestion.show();
     var optionButton = $(this).attr('id');
     gradeFunction(optionButton);
-    scoreDisplay.text(scoreCount);
-    timer.hide();
     clearAnswer();
 
 })
 
 ///Event on click 4rd question button
+$('.FourthOptnButton').on('click', function(){
+    fourthQuestion.hide();
+    fifthQuestion.show();
+    var optionButton = $(this).attr('id');
+    gradeFunction(optionButton);
+    clearAnswer();
+})
+
 ///Event on click 5th and final question button
+$('.FifthOptnButton').on('click', function(){
+    finalQuestion = true;
+    fifthQuestion.hide();
+    SaveScore.show();
+    var optionButton = $(this).attr('id');
+    gradeFunction(optionButton);
+    scoreDisplay.text(scoreCount * 2);
+    timer.hide();
+    clearAnswer();
+
+})
 
 ///Event on click submmit button
 $('#submitBtn').on('click', function(event){
     event.preventDefault();
     var ScoreObj = new Object();
     ScoreObj.Name = scoreInitials.val();
-    ScoreObj.Score = scoreCount;
+    ScoreObj.Score = scoreCount * 2;
     console.log(ScoreObj.Name);
     localStorage.setItem("score", JSON.stringify(ScoreObj));
     PrintScores(ScoreObj.Name, ScoreObj.Score);
@@ -124,7 +142,7 @@ function PrintScores(name, score){
 
 // timer function
 function TimeLeft(){
-    var timeLeft = 10;
+    var timeLeft = 50;
     $('#timeLeft').text(timeLeft);
     var timerInterval = setInterval(function(){
         timeLeft--;
@@ -140,7 +158,7 @@ function TimeLeft(){
             finalQuestion = false;
             $('#timeLeft').text("50");
             $('.question_section').hide();
-            scoreDisplay.text(scoreCount);
+            scoreDisplay.text(scoreCount * 2);
             SaveScore.show();
         }
     }, 1000);

@@ -6,6 +6,12 @@ body {
     align-items: center;
 }
 
+div.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Applying styles to buttons */
 button, form input[type=submit] {
     background-color: #1b3a4b;
@@ -36,5 +42,32 @@ div.options {
 
 div.options button{
     margin-top: 5px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2%;
+    width: fit-content;
+}
+
+table{
+    margin: 10%;
+    width: 85%;
+}
+
+.scoresHistory{
+    display: flex;
+    flex-direction: column;
+    width: 36%;
+    align-items: center;
+}
+
+div.intro p{
+    text-align: center;
+    margin: 0px;
+}
+div.intro button{
+    margin-top: 8%;
 }
 
